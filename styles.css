@@ -29,13 +29,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
+  background: rgba(20, 24, 40, 0.92); /* Troque para um fundo visível */
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 50;
   
-  backdrop-filter: blur(1px);
+  
+  /* Remova o blur */
+  /* backdrop-filter: blur(1px); */
 }
+
 
 .logo {
   font-family: "Orbitron", sans-serif;
