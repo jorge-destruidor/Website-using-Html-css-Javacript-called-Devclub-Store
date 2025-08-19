@@ -1,134 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Rem Store - Tech Shop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
   </head>
   <body>
     <header>
-      <div class="logo">DevClub Store</div>
+      <div class="logo">Rem<span>Store</span></div>
       <nav>
         <ul>
-          <li>Home</li>
-          <li>Produtos</li>
-          <li>Contato</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="#">Contato</a></li>
         </ul>
       </nav>
     </header>
 
     <main class="container">
-      <div class="techcircles">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
+      <div class="background-circles">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
       </div>
 
-      <div class="list">
-        <div class="item active">
-          <div class="product-img">
-            <img src="./img/apple-watch.png" alt="Apple Watch" />
+      <section class="carousel">
+        <div class="carousel-list">
+          <div class="carousel-item active">
+            <div class="product-img">
+              <img src="./img/apple-watch.png" alt="Apple Watch" />
+            </div>
+            <div class="content">
+              <span class="product-tag">Novo Lançamento</span>
+              <h2 class="product-name">Apple Watch Series 10</h2>
+              <p class="description">
+                O Apple Watch Series 10 oferece design inovador, desempenho aprimorado e novos recursos de saúde e fitness. Com uma tela sempre ativa, monitoramento avançado de saúde e maior autonomia, é o companheiro ideal para acompanhar sua rotina com estilo e precisão.
+              </p>
+              <button class="btn">Saiba mais</button>
+            </div>
           </div>
-          <div class="content">
-            <p class="product-tag">Novo Lançamento</p>
-            <p class="product-name">Apple Watch Series 10</p>
-            <p class="description">
-              O Apple Watch Series 10 oferece design inovador, desempenho
-              aprimorado e novos recursos de saúde e fitness. Com uma tela
-              sempre ativa, monitoramento avançado de saúde e maior autonomia, é
-              o companheiro ideal para acompanhar sua rotina com estilo e
-              precisão.
-            </p>
-            <button class="btn">Saiba mais</button>
+          <div class="carousel-item">
+            <div class="product-img">
+              <img src="./img/air-pods.png" alt="Air Pods" />
+            </div>
+            <div class="content">
+              <span class="product-tag">Som Premium</span>
+              <h2 class="product-name">Air Pods</h2>
+              <p class="description">
+                Os AirPods são fones de ouvido sem fio da Apple, conhecidos por seu som de alta qualidade, facilidade de conexão e integração perfeita com dispositivos Apple. Com design compacto, controle por toque e até 24 horas de autonomia com o estojo de carga, eles oferecem uma experiência imersiva para música, chamadas e assistente de voz.
+              </p>
+              <button class="btn">Saiba mais</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="product-img">
+              <img src="./img/vision-pro.png" alt="Vision Pro" />
+            </div>
+            <div class="content">
+              <span class="product-tag">Performance Incrível</span>
+              <h2 class="product-name">Vision Pro</h2>
+              <p class="description">
+                O Apple Vision Pro é um dispositivo de realidade mista que combina o mundo físico e digital de forma imersiva. Com design sofisticado e avançada tecnologia de microdisplay, ele oferece uma experiência visual e interativa de alta definição, ideal para entretenimento, produtividade e aplicativos inovadores.
+              </p>
+              <button class="btn">Saiba mais</button>
+            </div>
           </div>
         </div>
 
-        <div class="item">
-          <div class="product-img">
-            <img src="./img/air-pods.png" alt="Air Pods" />
+        <div class="carousel-controls">
+          <button class="arrow-btn" id="prev" aria-label="Anterior">
+            <svg width="24" height="24" fill="none" stroke="#00f7ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="carousel-indicators">
+            <span class="numbers">01</span>
+            <div class="dots">
+              <div class="dot active"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
           </div>
-          <div class="content">
-            <p class="product-tag">Som Premium</p>
-            <p class="product-name">Air Pods</p>
-            <p class="description">
-              Os AirPods são fones de ouvido sem fio da Apple, conhecidos por
-              seu som de alta qualidade, facilidade de conexão e integração
-              perfeita com dispositivos Apple. Com design compacto, controle por
-              toque e até 24 horas de autonomia com o estojo de carga, eles
-              oferecem uma experiência imersiva para música, chamadas e
-              assistente de voz.
-            </p>
-            <button class="btn">Saiba mais</button>
-          </div>
+          <button class="arrow-btn" id="next" aria-label="Próximo">
+            <svg width="24" height="24" fill="none" stroke="#00f7ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+          </button>
         </div>
-
-        <div class="item">
-          <div class="product-img">
-            <img src="./img/vision-pro.png" alt="Vision Pro" />
-          </div>
-          <div class="content">
-            <p class="product-tag">Performance Incrível</p>
-            <p class="product-name">Vision Pro</p>
-            <p class="description">
-              O Apple Vision Pro é um dispositivo de realidade mista que combina
-              o mundo físico e digital de forma imersiva. Com design sofisticado
-              e avançada tecnologia de microdisplay, ele oferece uma experiência
-              visual e interativa de alta definição, ideal para entretenimento,
-              produtividade e aplicativos inovadores. Além disso, conta com um
-              sistema de rastreamento ocular e controles de gestos,
-              proporcionando uma experiência única e envolvente.
-            </p>
-            <button class="btn">Saiba mais</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="arrows">
-        <button class="arrow-btn" id="prev">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="#fff"
-            class="bi bi-arrow-90deg-left"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708z"
-            />
-          </svg>
-        </button>
-
-        <button class="arrow-btn" id="next">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="#fff"
-            class="bi bi-arrow-90deg-right"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M14.854 4.854a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 4H3.5A2.5 2.5 0 0 0 1 6.5v8a.5.5 0 0 0 1 0v-8A1.5 1.5 0 0 1 3.5 5h9.793l-3.147 3.146a.5.5 0 0 0 .708.708z"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <div class="numbers">01</div>
-      <div class="dots">
-        <div class="dot active"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
+      </section>
     </main>
-    <script src="./scripts.js"></script>
+    <footer>
+      <p>© 2025 Rem Store. Todos os direitos reservados.</p>
+    </footer>
+    <script src="scripts.js"></script>
   </body>
 </html>
