@@ -228,30 +228,44 @@ header nav ul li:hover::after {
 }
 
 .numbers {
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
     font-family: "Orbitron", sans-serif;
-    font-size: 3rem;
-    font-weight: 800;
-    color: rgba(255, 255, 255, 0.2);
-
-    
+    font-size: 2.5rem;
+    color: #00f7ff;
+    letter-spacing: 2px;
+    z-index: 10;
+    user-select: none;
+    font-weight: 700;
+    background: rgba(15,15,30,0.7);
+    padding: 8px 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px 0 rgba(0,247,255,0.08);
 }
-
 .dots {
     display: flex;
-    gap: 10px;
+    gap: 14px;
+    position: absolute;
+    bottom: 40px;
+    left: 60px;
+    z-index: 10;
 }
 
 .dot {
-    width: 40px;
-    height: 4px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 2px;
-    
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #1f1f3a;
+    border: 2px solid #00f7ff;
+    transition: background 0.3s, transform 0.3s, border-color 0.3s;
+    cursor: pointer;
 }
 
 .dot.active {
     background: #00f7ff;
-    box-shadow: rgba(0, 247, 255, 0.5);
+    border-color: #fff;
+    transform: scale(1.2);
 }
 
 .tech-circle {
